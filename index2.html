@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materials</title>
+   <link rel="stylesheet" href="style2.css">
+   <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+  
+  <body>
+   <div class=" sidebar ">
+    
+    <br>
+         <ul>
+             <li>
+                 <a href="#"><i class="fa-solid fa-chart-line"><br><br>Dashboard</i>
+                 </a>
+                 </li>
+             <li>
+                 <a href="index2.html"><i class='fas fa-envelope-open-text'><br><br>
+               Test papers </i></a>
+             </li>
+             <li>
+                 <a href="#"><i class='fas fa-poll'><br><br>Materials</i></a>
+             </li>
+             <li>
+                 <a href="#"><i class='fas fa-calendar-alt'><br><br>Date</i></a>
+             </li>
+             <li>
+                 <a href="#"><i class='fas fa-user-circle'><br><br>Users</i></a>
+             </li>
+             </ul>
+       </div>
+     </div>
+    </div>
+<div class="container" >
+<button id="myBtn">Add new</button>
+   <div class="rows" id="material">
+        
+  </div>
+   </div>
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        
+        <div class="containers">
+        <form action="/action_page.php"><br><br>
+            <label for="title">Bookname</label><br>
+            <input type="text" id="fname" name="firstname" placeholder="Book name"><br>
+      <label for="Exam"></label>
+      <label for="Exam"> Exam</label><br>
+            <select id="Exam" placeholder="Exam">
+              <option value="Category">Exam 1</option>
+              <option value="Category">Exam 2</option>
+              <option value="Category">Exam 3</option><br>
+            </select><br>
+            <label for="subject"></label>
+            <label for="subject"> subject</label><br>
+                  <select id="Exam" placeholder="Exam">
+                    <option value="Category">subject 1</option>
+                    <option value="Category">subject 2</option>
+                    <option value="Category">subject 3</option><br>
+                  </select><br><br>
+          <div class="form-group" x-data="{ fileName: '' }">
+            <div class="input-group shadow">
+              <span class="input-group-text px-3 text-muted"><i class="fas fa-image fa-lg"></i></span>
+              <input type="file" x-ref="file" @change="fileName = $refs.file.files[0].name" name="img[]" class="d-none">
+              <input type="text" class="form-control form-control-lg" placeholder="Upload Image" x-model="fileName">
+              <button class="browse" type="button" x-on:click.prevent="$refs.file.click()"><i class="fas fa-image"></i> Browse</button>
+            </div>
+          </div>
+      
+          <br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+        <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
+          
+          // Get the button that opens the modal
+          var btn = document.getElementById("myBtn");
+          
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+          
+          // When the user clicks the button, open the modal 
+          btn.onclick = function() {
+            modal.style.display = "block";
+          }
+          
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+          
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+          </script>
+
+         
+<script src="getmaterial.js"></script>
+         
+</body>
+</html>

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+htmbody {
+    font-family: 'Lora', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.sidebar {
+width: 250px;
+    height: 100%;
+  }
+.sidebar header {
+    font-size: 15px;
+    width: 20px;
+ color: white;
+    text-align: center;
+    line-height: 50px;
+    background: #5e9fc7;
+    user-select: none;
+   width:40px;
+}
+.sidebar ul a {
+    display: block;
+    width: 150%;
+    line-height: 140px;
+    font-size: 20px;
+    color: rgb(45, 101, 243);
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 2px 2px 2px 2px rgb(5, 160, 227);
+    transition: 0.3s;
+}
+ul li:hover a {
+    padding-left: 50px;
+    background-color: rgb(95, 152, 217);
+}
+.sidebar ul a i {
+    margin-right: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
